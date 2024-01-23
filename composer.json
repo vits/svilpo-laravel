@@ -1,0 +1,24 @@
+{
+    "name": "vits/svilpo-laravel",
+    "description": "Helper library for Laravel projects.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vits\\Svilpo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vitauts Stočka",
+            "email": "vs@vits.lv"
+        }
+    ],
+    "require": {
+        "php": "~8.2.0|~8.3.0",
+        "laravel/framework": "^10.0",
+        "inertiajs/inertia-laravel": "^0.6.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
