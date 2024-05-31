@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Vits\Svilpo;
 
 use Illuminate\Contracts\Database\Query\Builder;
-use Illuminate\Routing\Controller;
 use Inertia\Inertia;
 
 class Response
@@ -15,11 +14,11 @@ class Response
     protected array $data = [];
 
     public function __construct(
-        protected Controller $controller,
+        protected $controller,
         protected ?Builder $query = null
     ) {}
 
-    public function paginate(int $perPage = null)
+    public function paginate(?int $perPage = null)
     {
         $this->paginate = $perPage;
 
