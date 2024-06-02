@@ -19,7 +19,7 @@ class SvilpoMiddleware extends Middleware
         $data = [];
         $routes = [];
 
-        if ($controller = Route::current()->controller) {
+        if ($controller = Route::current()->getController()) {
             if (method_exists($controller, 'getIndexUrl')) {
                 $routes['default'] = $controller->getIndexUrl();
             }
