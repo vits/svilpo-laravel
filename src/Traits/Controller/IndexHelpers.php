@@ -20,11 +20,9 @@ trait IndexHelpers
     use InertiaHelpers;
 
     /**
-     * @param Builder|string $query
-     *
      * @throws BindingResolutionException
      */
-    public function indexQuery(Builder|Relation|string $query): Builder
+    public function indexQuery(Builder|Relation|string $query): Builder|Relation
     {
         if (\is_string($query)) {
             $query = \call_user_func($query.'::query');
@@ -65,7 +63,7 @@ trait IndexHelpers
         return $query;
     }
 
-    public function indexResponse(?Builder $query)
+    public function indexResponse(Builder|Relation $query)
     {
         $response = new Response($this, $query);
 
